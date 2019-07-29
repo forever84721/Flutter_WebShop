@@ -12,9 +12,34 @@ class _CategoryPageState extends State<CategoryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: SearchBar(
-        foo: 'Category',
+        title: 'Category',
       ),
-      body: Text('Category'),
+      body: ListView(
+        // This next line does the trick.
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          Container(
+            width: 160.0,
+            color: Colors.red,
+          ),
+          Container(
+            width: 160.0,
+            color: Colors.blue,
+          ),
+          Container(
+            width: 160.0,
+            color: Colors.green,
+          ),
+          Container(
+            width: 160.0,
+            color: Colors.yellow,
+          ),
+          Container(
+            width: 160.0,
+            color: Colors.orange,
+          ),
+        ],
+      ),
     );
   }
 }
