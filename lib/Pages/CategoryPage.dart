@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_webshop/Widget/GeneralDrawer.dart';
 import 'package:flutter_webshop/Widget/SearchBar.dart';
 
 class CategoryPage extends StatefulWidget {
@@ -11,6 +12,7 @@ class _CategoryPageState extends State<CategoryPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: GeneralDrawer(),
       appBar: SearchBar(
         title: 'Category',
       ),

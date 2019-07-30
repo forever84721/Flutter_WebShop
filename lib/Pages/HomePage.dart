@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_webshop/Widget/GeneralDrawer.dart';
 import 'package:flutter_webshop/Widget/SearchBar.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
@@ -14,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: GeneralDrawer(),
       appBar: SearchBar(title: 'Home'),
       body: Column(
         children: <Widget>[

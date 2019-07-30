@@ -16,10 +16,6 @@ class SearchBar extends StatefulWidget implements PreferredSizeWidget {
 class _SearchBarState extends State<SearchBar> {
   Widget appBarTitle;
   Icon actionIcon = new Icon(Icons.search);
-  // _SearchBarState({this.foo}) {
-  //   print('foo:$foo');
-  // }
-  // String foo;
   @override
   void initState() {
     setState(() {
@@ -32,6 +28,10 @@ class _SearchBarState extends State<SearchBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: new IconButton(
+          icon: new Icon(Icons.menu),
+          onPressed: () => Scaffold.of(context).openDrawer(),
+        ),
         centerTitle: true,
         title: appBarTitle,
         actions: <Widget>[
